@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
-import Link from 'next/link'
 import { getAllPosts } from './api/post'
+import Link from 'next/link'
+import Head from 'next/head'
 
 interface HomeProps {
   posts: Array<{
@@ -11,18 +12,21 @@ interface HomeProps {
 
 export default function Home(props: HomeProps) {
   return (
-    <div>
-      <h1>Blog do Renan</h1>
-      <ul>
+    <main className="bg-gray-300 h-screen w-full py-2 px-2">
+      <Head>
+        <title>Bem vindo!</title>
+      </Head>
+      <h1 className="font-bold text-2xl">Blog do Renan</h1>
+      <ul className="flex flex-col">
         {props.posts.map((post, index) => (
           <li key={index}>
             <Link href={post.slug}>
-              <a>{post.title}</a>
+              <a className="">{post.title}</a>
             </Link>
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   )
 }
 
