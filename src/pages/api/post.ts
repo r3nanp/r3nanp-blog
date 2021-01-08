@@ -25,14 +25,16 @@ export async function getPostBySlug(slug: any) {
   const baseUrl =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://youtube-serverless-thumb-generator.vercel.app'
+      : 'https://next-puppeteer.vercel.app'
 
   const meta = matter(fileContent.default)
   const content = marked(meta.content)
 
   const thumbnailUrl = `${baseUrl}/api/thumbnail.png?title=${
     meta.data.title
-  }&thumbnail_bg=${encodeURIComponent(meta.data.thumbnail_bg)}`
+  }&thumbnail_bg=${encodeURIComponent(
+    meta.data.thumbnail_bg
+  )}&thumbnail_logos=${encodeURIComponent(meta.data.thumbnail_logos)}`
 
   return {
     title: meta.data.title,
