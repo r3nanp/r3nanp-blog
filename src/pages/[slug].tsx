@@ -1,5 +1,5 @@
 import React from 'react'
-import PostLayout from '../_layouts/PostLayout'
+import { PostLayout } from '../_layouts/PostLayout'
 import { getPostBySlug, getAllPosts } from './api/post'
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 
