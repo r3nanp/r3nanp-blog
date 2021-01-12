@@ -1,5 +1,3 @@
-import { sanitizeHtml } from './sanitizeHtml'
-
 interface GetHtmlProps {
   title: string
   thumbnail_bg?: string
@@ -9,7 +7,6 @@ interface GetHtmlProps {
 export const getHtmlThumbnailTemplate = ({
   title,
   thumbnail_bg,
-  thumbnail_logos,
 }: GetHtmlProps) => {
   return `<!DOCTYPE html>
   <html lang="en">
@@ -75,27 +72,22 @@ export const getHtmlThumbnailTemplate = ({
     <main id="wrapper">
       <h1>${title}</h1>
       <div id="logo-wrapper">
-        <img src=${thumbnail_logos} />
-
-        ${thumbnail_logos
-          .map((src, i) => getPlusSign(i) + getImage(src, 'auto', '225'))
-          .join('')}
       </div>
     </main>
   </body>
   </html>`
 }
 
-function getImage(src: string, width: string, height: string) {
-  return `<img
-      class="logo"
-      alt="Generated Image"
-      src="${sanitizeHtml(src)}"
-      width="${sanitizeHtml(width)}"
-      height="${sanitizeHtml(height)}"
-  />`
-}
+// function getImage(src: string, width: string, height: string) {
+//   return `<img
+//       class="logo"
+//       alt="Generated Image"
+//       src="${sanitizeHtml(src)}"
+//       width="${sanitizeHtml(width)}"
+//       height="${sanitizeHtml(height)}"
+//   />`
+// }
 
-function getPlusSign(i: number) {
-  return i === 0 ? '' : '<div class="plus">+</div>'
-}
+// function getPlusSign(i: number) {
+//   return i === 0 ? '' : '<div class="plus">+</div>'
+// }
