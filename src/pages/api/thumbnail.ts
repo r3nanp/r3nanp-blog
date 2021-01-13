@@ -13,7 +13,6 @@ export default async function (
 
     const title = String(query.title)
     const thumbnail_bg = String(query.thumbnail_bg)
-    const thumbnail_logos = Array.from(query.thumbnail_logos)
 
     if (!title) {
       throw new Error('Title is required!')
@@ -22,7 +21,6 @@ export default async function (
     const html = getHtmlThumbnailTemplate({
       title,
       thumbnail_bg,
-      thumbnail_logos,
     })
 
     const file = await getScreenshot(isDev, html)
