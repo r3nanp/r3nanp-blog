@@ -2,16 +2,15 @@
 title: "Construindo APIs com GraphQL no Node.js"
 description: "No post de hoje criaremos um servidor simples com GraphQL e Express.js, mas que servira de base para estruturas mais complexas."
 thumbnail_bg: "#121214"
-thumbnail_logos:
-  - "https://cdn.worldvectorlogo.com/logos/graphql.svg"
-  - "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
 ---
 
 Já falamos um pouco sobre ferramentas de consumo de dados de API com GraphQL como o Apollo e Relay, agora chegou o momento de mostrarmos um pouco como funciona um serviço com GraphQL.
 
 No post de hoje criaremos um servidor simples com GraphQL e Express.js, mas que servira de base para estruturas mais complexas.
 
-## GraphQL
+&nbsp;
+
+**GraphQL**
 
 O GraphQL é uma linguagem de consultas de dados para APIs que visa passar a responsabilidade do pedido de dados para o lado do cliente, o cliente escolhe o que quer e o servidor entrega. 
 
