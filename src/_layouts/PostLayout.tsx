@@ -17,7 +17,7 @@ const PostLayout: React.FC<IPostLayout> = ({
     <main className="bg-gray-400 h-screen">
       <Head>
         <title>{title}</title>
-
+      
         <meta name="description" content={description} />
 
         <meta property="og:site_name" content="Blog do Renan" />
@@ -47,7 +47,7 @@ const PostLayout: React.FC<IPostLayout> = ({
           alt={title}
         />
         <div
-          className="text-justify py-4"
+          className="text-justify p-2"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
