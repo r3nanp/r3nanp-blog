@@ -34,7 +34,7 @@ export async function getPostBySlug(slug: any) {
     meta.data.title
   }&thumbnail_bg=${encodeURIComponent(
     meta.data.thumbnail_bg
-  )}&thumbnail_logos=${encodeURIComponent(meta.data.thumbnail_logos)}`
+  )}`
 
   return {
     title: meta.data.title,
