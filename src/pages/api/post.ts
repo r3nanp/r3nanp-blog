@@ -25,7 +25,7 @@ export async function getPostBySlug(slug: any) {
   const baseUrl =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://next-puppeteer.vercel.app'
+      : 'https://r3nanp-blog.vercel.app'
 
   const meta = matter(fileContent.default)
   const content = marked(meta.content)
