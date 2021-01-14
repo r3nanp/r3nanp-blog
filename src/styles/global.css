@@ -1,13 +1,16 @@
   
 html,
-body {
+body, * {
   padding: 0;
   margin: 0;
   font-family: Roboto, system-ui, sans-serif;
 }
 
+h1, h2, h3, strong {
+  font-family: Poppins;
+}
+
 a {
-  color: darkblue;
   padding: inherit;
   text-decoration: none;
 }
