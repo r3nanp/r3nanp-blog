@@ -1,20 +1,26 @@
+// eslint-disable-next-line no-use-before-define
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Header } from 'components/Header'
+import Image from 'next/image'
+import { Header } from '../components/Header'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
+import { Footer } from '../components/Footer'
 
 const About: React.FC = () => {
   return (
     <main className="h-screen">
       <Head>
+        <link rel="icon" href="/favicon.ico" />
         <title>Sobre mim</title>
       </Head>
       <Header />
 
-      <div className="px-4 border-b border-black h-1/2 flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-black text-center">Sobre mim</h1>
-        <p className="text-md text-black text-center">Conheça-me!</p>
+      <div className="px-4 border-b border-black h-1/2 bg-gray-200 flex flex-col items-center justify-center">
+        <Image src="/me.png" alt="Me" width={80}  height={80} className="rounded-full" />
+        <h1 className="text-2xl font-bold text-black text-center uppercase">Sobre mim</h1>
+        <p className="text-md text-black text-center tracking-wide">Conheça-me!</p>
       </div>
 
       <div className="px-4 py-6">
@@ -47,7 +53,7 @@ const About: React.FC = () => {
         <h2 className="text-xl font-bold py-2 mb-4">Contato</h2>
         <div className="flex flex-col w-full justify-center items-center md:items-stretch md:justify-start">
           <Link href="https://linkedin.com/in/r3nanp">
-            <a className="mb-2" rel="noopener noreferrer" target="_blank">
+            <a className="mb-2 w-48" rel="noopener noreferrer" target="_blank">
               <div className="flex items-center justify-center w-48 rounded text-white bg-blue-800 p-4 hover:bg-blue-900">
                 <FaLinkedin size={20} color="#fff" />
                 <p className="px-2">LinkedIn</p>
@@ -55,7 +61,7 @@ const About: React.FC = () => {
             </a>
           </Link>
           <Link href="https://github.com/r3nanp">
-            <a className="mb-2" rel="noopener noreferrer" target="_blank">
+            <a className="mb-2 w-48" rel="noopener noreferrer" target="_blank">
               <div className="flex items-center justify-center w-48 rounded text-white bg-gray-800 p-4 hover:bg-gray-900">
                 <FaGithub size={20} color="#fff" />
                 <p className="px-2">Github</p>
@@ -64,7 +70,7 @@ const About: React.FC = () => {
           </Link>
 
           <Link href="mailto:renanmol87@gmail.com">
-            <a rel="noopener noreferrer" target="_blank">
+            <a className="w-48" rel="noopener noreferrer" target="_blank">
               <div className="flex items-center justify-center w-48 rounded text-white bg-red-700 p-4 hover:bg-red-900">
                 <AiOutlineMail size={20} color="#fff" />
                 <p className="px-2">Email</p>
@@ -73,6 +79,7 @@ const About: React.FC = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </main>
   )
 }
