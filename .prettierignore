@@ -1,0 +1,6 @@
+node_modules/
+.vercel/
+.next/
+
+# Ignore markdows
+_posts/

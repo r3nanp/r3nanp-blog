@@ -1,0 +1,6 @@
+node_modules/
+.vercel/
+.next/
+
+# Ignore markdowns
+_posts/
