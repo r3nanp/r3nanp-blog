@@ -34,4 +34,5 @@ Laravel é um web framework com sintaxe fácil e expressiva usando o modelo de a
 &nbsp;
 
 **Links:**
-<a class="hover:text-blue-700 hover:underline" href="https://laravel.com/">Laravel</a>
+
+<a class="#8257e6 hover:text-blue-700 hover:underline" href="https://laravel.com/">Laravel</a>
