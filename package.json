@@ -1,7 +1,25 @@
 {
   "name": "blog",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "keywords": [
+    "next",
+    "typescript",
+    "react",
+    "blog",
+    "tailwindcss",
+    "css",
+    "js"
+  ],
+  "author": "Renan Pereira <renanmol87@gmail.com>",
+  "description": "A blog written with Next.js to improve my knowledge in this framework.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r3nanp/r3nanp-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r3nanp/r3nanp-blog/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +30,7 @@
     "chrome-aws-lambda": "^5.5.0",
     "framer-motion": "^3.2.0",
     "next": "10.0.5",
-    "postcss": "^8.2.3",
+    "postcss": "^8.2.4",
     "puppeteer-core": "^5.5.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -25,8 +43,19 @@
     "@types/puppeteer-core": "^5.4.0",
     "@types/react": "^17.0.0",
     "@types/webpack-env": "^1.16.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
     "gray-matter": "^4.0.2",
     "marked": "^1.2.7",
+    "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
     "typescript": "^4.1.3"
   }
