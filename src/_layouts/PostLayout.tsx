@@ -18,7 +18,7 @@ const PostLayout: React.FC<IPostLayout> = ({
   title,
 }) => {
   return (
-    <main className="bg-gray-100 h-screen">
+    <main className="bg-gray-100 h-full">
       <Head>
         <title>{title}</title>
 
@@ -40,7 +40,7 @@ const PostLayout: React.FC<IPostLayout> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={thumbnailUrl} />
 
-        <link rel="icon" href="static/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <article className="py-6 px-4 bg-gray-100">
