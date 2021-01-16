@@ -19,13 +19,13 @@ export async function getAllPosts() {
   return posts
 }
 
-export async function getPostBySlug(slug: any) {
+export async function getPostBySlug(slug: string | string[]) {
   const fileContent = await import(`../../_posts/${slug}.md`)
 
   const baseUrl =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://r3nanp-blog.vercel.app'
+      : 'https://r3nanp.vercel.app'
 
   const meta = matter(fileContent.default)
   const content = marked(meta.content)
