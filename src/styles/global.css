@@ -1,12 +1,12 @@
-  
+
 html,
-body, * {
+body {
   padding: 0;
   margin: 0;
   font-family: Roboto, system-ui, sans-serif;
 }
 
-h1, h2, h3, strong {
+h1, h2, h3, h4, h5, h6, strong {
   font-family: Poppins;
 }
 
