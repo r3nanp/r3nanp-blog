@@ -2,11 +2,11 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
-import { Footer } from '../components/Footer'
 
 const About: React.FC = () => {
   return (
@@ -18,7 +18,6 @@ const About: React.FC = () => {
       <Header />
 
       <div className="px-4 border-b border-black h-1/2 bg-gray-200 flex flex-col items-center justify-center">
-        <Image src="/me.png" alt="Me" width={80}  height={80} className="rounded-full" />
         <h1 className="text-2xl font-bold text-black text-center uppercase">Sobre mim</h1>
         <p className="text-md text-black text-center tracking-wide">Conheça-me!</p>
       </div>
