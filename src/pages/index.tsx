@@ -36,7 +36,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
                 <a>
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="flex justify-center items-center m-4 py-4 px-8 bg-gray-600 rounded w-60 h-60"
+                    className="flex justify-center items-center m-4 py-4 px-8 bg-purple-500 rounded w-60 h-60"
                   >
                     <strong className="text-white text-center text-xl">
                       {post.title}
