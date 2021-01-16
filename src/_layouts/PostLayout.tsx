@@ -1,4 +1,8 @@
+// eslint-disable-next-line no-use-before-define
+import React from 'react'
 import Head from 'next/head'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 interface IPostLayout {
   title: string
@@ -14,10 +18,10 @@ const PostLayout: React.FC<IPostLayout> = ({
   title,
 }) => {
   return (
-    <main className="bg-gray-400 h-screen">
+    <main className="bg-gray-100 h-screen">
       <Head>
         <title>{title}</title>
-      
+
         <meta name="description" content={description} />
 
         <meta property="og:site_name" content="Blog do Renan" />
@@ -35,8 +39,11 @@ const PostLayout: React.FC<IPostLayout> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={thumbnailUrl} />
+
+        <link rel="icon" href="static/favicon.ico" />
       </Head>
-      <article className="py-6 px-4">
+      <Header />
+      <article className="py-6 px-4 bg-gray-100">
         <h1 className="flex items-center font-bold text-xl md:justify-center">
           {title}
         </h1>
@@ -47,10 +54,11 @@ const PostLayout: React.FC<IPostLayout> = ({
           alt={title}
         />
         <div
-          className="text-justify p-2"
+          className="text-justify p-2 antialiased bg-gray-100"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
+      <Footer />
     </main>
   )
 }
