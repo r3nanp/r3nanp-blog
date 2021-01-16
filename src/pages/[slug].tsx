@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-use-before-define
 import React from 'react'
 import { PostLayout } from '../_layouts/PostLayout'
 import { getPostBySlug, getAllPosts } from './api/post'
@@ -10,13 +11,18 @@ interface PostProps {
   content: string
 }
 
-export default function Post(props: PostProps) {
+const Post: React.FC<PostProps> = ({
+  title,
+  description,
+  thumbnailUrl,
+  content,
+}) => {
   return (
     <PostLayout
-      title={props.title}
-      description={props.description}
-      thumbnailUrl={props.thumbnailUrl}
-      content={props.content}
+      title={title}
+      description={description}
+      thumbnailUrl={thumbnailUrl}
+      content={content}
     />
   )
 }
@@ -43,3 +49,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   }
 }
+
+export default Post
