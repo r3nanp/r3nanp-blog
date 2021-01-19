@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex items-center justify-center flex-col pb-2 md:flex-row">
+    <footer className="flex items-center justify-center flex-col pb-2 w-full md:flex-row">
       <p className="text-center font-sm">Blog desenvolvido com Next.js 💖!</p>
       <Link href="https://github.com/r3nanp/r3nanp-blog">
         <a rel="noopener noreferrer" target="_blank">
