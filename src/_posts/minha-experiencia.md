@@ -14,9 +14,9 @@ Primeiro instale o PHP e o Laravel
 &nbsp;
 ### Construindo estrutura do Laravel usando composer:
 ```
-composer create-project laravel/laravel my-app
+composer create-project laravel/laravel app
 
-# Rode este comando para rodar o servidor Laravel:
+# Rodando o servidor Laravel:
 php artisan serve
 ```
 &nbsp;
