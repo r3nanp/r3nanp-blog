@@ -22,7 +22,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
     <>
       <main className="bg-white w-full h-screen">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/icon.png" />
           <title>Renan Pereira - Desenvolvedor de software</title>
         </Head>
 

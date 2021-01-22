@@ -40,7 +40,7 @@ const PostLayout: React.FC<IPostLayout> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={thumbnailUrl} />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.png" />
       </Head>
       <Header />
       <article className="py-6 px-4 bg-gray-100 break-words w-full">
