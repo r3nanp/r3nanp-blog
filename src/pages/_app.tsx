@@ -1,9 +1,10 @@
+/* eslint-disable no-use-before-define */
 import '../styles/tailwind.css'
 import '../styles/global.css'
-// eslint-disable-next-line no-use-before-define
+import { AppProps } from 'next/app'
 import React from 'react'
 
-function MyApp({ Component, pageProps }) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }
 
