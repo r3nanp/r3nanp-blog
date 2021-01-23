@@ -13,3 +13,43 @@ A blog written with Next.js to improve my knowledge in this framework.
 - TailwindCSS
 - Puppeteer Core
 - Marked
+
+### 🤔 How to run the app locally
+
+```
+# Clone repository
+
+$ git clone https://github.com/r3nanp/r3nanp-blog.git
+```
+
+### 💪 How to Fork the project
+
+```
+# Create a new branch with your changes:
+
+$ git checkout -b <branch>
+```
+
+```
+# Save your changes and create a commit message telling you what you did:
+
+$ git commit -m "<commit>"
+```
+---
+```
+# Submit your changes:
+
+$ git push origin <branch>
+```
+
+```
+# At the root of the project, run:
+
+yarn or npm install
+```
+
+```
+# To run the app in your machine:
+
+yarn dev or npm run dev
+```
