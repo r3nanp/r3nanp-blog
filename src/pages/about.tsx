@@ -1,14 +1,13 @@
 // eslint-disable-next-line no-use-before-define
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { Contact } from '../components/Contact'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
-import { motion } from 'framer-motion'
 
 const About: React.FC = () => {
   return (
@@ -63,40 +62,31 @@ const About: React.FC = () => {
 
         <h2 className="text-xl font-bold py-2 mb-4">Contato</h2>
         <div className="flex flex-col w-full justify-center items-center md:items-stretch md:justify-start">
-          <Link href="https://linkedin.com/in/r3nanp">
-            <a className="mb-2 w-48" rel="noopener noreferrer" target="_blank">
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                className="flex items-center justify-center w-48 rounded text-white bg-blue-800 p-4 hover:bg-blue-900"
-              >
-                <FaLinkedin size={20} color="#fff" />
-                <p className="px-2">LinkedIn</p>
-              </motion.div>
-            </a>
-          </Link>
-          <Link href="https://github.com/r3nanp">
-            <a className="mb-2 w-48" rel="noopener noreferrer" target="_blank">
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                className="flex items-center justify-center w-48 rounded text-white bg-gray-800 p-4 hover:bg-gray-900"
-              >
-                <FaGithub size={20} color="#fff" />
-                <p className="px-2">Github</p>
-              </motion.div>
-            </a>
-          </Link>
+          <Contact
+            href="https://linkedin.com/in/r3nanp"
+            color="bg-blue-600"
+            hover_color="bg-blue-700"
+          >
+            <FaLinkedin size={20} color="#fff" />
+            <p className="px-2">LinkedIn</p>
+          </Contact>
+          <Contact
+            href="https://github.com/r3nanp"
+            color="bg-gray-600"
+            hover_color="bg-gray-700"
+          >
+            <FaGithub size={20} color="#fff" />
+            <p className="px-2">Github</p>
+          </Contact>
 
-          <Link href="mailto:renanmol87@gmail.com">
-            <a className="w-48" rel="noopener noreferrer" target="_blank">
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                className="flex items-center justify-center w-48 rounded text-white bg-red-700 p-4 hover:bg-red-900"
-              >
-                <AiOutlineMail size={20} color="#fff" />
-                <p className="px-2">Email</p>
-              </motion.div>
-            </a>
-          </Link>
+          <Contact
+            href="mailto:renanmol87@gmail.com"
+            color="bg-red-600"
+            hover_color="bg-red-700"
+          >
+            <AiOutlineMail size={20} color="#fff" />
+            <p className="px-2">Email</p>
+          </Contact>
         </div>
       </div>
       <Footer />
