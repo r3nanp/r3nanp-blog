@@ -18,7 +18,7 @@ const About: React.FC = () => {
       </Head>
       <Header />
 
-      <div className="px-4 border-b border-black h-1/2 bg-gray-200 flex flex-col items-center justify-center">
+      <section className="px-4 border-b border-black h-1/2 bg-gray-200 flex flex-col items-center justify-center">
         <Image
           src="/me.png"
           width="150"
@@ -31,9 +31,9 @@ const About: React.FC = () => {
         <p className="text-md text-black text-center tracking-wide">
           Conheça-me!
         </p>
-      </div>
+      </section>
 
-      <div className="px-4 py-6">
+      <section className="px-4 py-6">
         <h2 className="text-xl font-bold text-white">Sobre mim</h2>
         <p className="leading-8 tracking-wide text-black pb-2 text-center md:text-justify">
           Olá, meu nome é Renan Pereira, sou desenvolvedor de software. Nasci em
@@ -42,7 +42,7 @@ const About: React.FC = () => {
         <p className="leading-8 tracking-wide text-black text-center md:text-justify">
           Sou técnico em Redes de computadores e desde 2018 estudo programação.
           Comecei com PHP e Python, e hoje estou trabalhando com Javascript,
-          Typescript, React e Node.
+          Typescript, React, React Native e Node.
         </p>
 
         <h2 className="text-xl font-bold py-2">Habilidades</h2>
@@ -68,7 +68,7 @@ const About: React.FC = () => {
             hover_color="bg-blue-700"
           >
             <FaLinkedin size={20} color="#fff" />
-            <p className="px-2">LinkedIn</p>
+            <span className="px-2">LinkedIn</span>
           </Contact>
           <Contact
             href="https://github.com/r3nanp"
@@ -76,7 +76,7 @@ const About: React.FC = () => {
             hover_color="bg-gray-700"
           >
             <FaGithub size={20} color="#fff" />
-            <p className="px-2">Github</p>
+            <span className="px-2">Github</span>
           </Contact>
 
           <Contact
@@ -85,10 +85,10 @@ const About: React.FC = () => {
             hover_color="bg-red-700"
           >
             <AiOutlineMail size={20} color="#fff" />
-            <p className="px-2">Email</p>
+            <span className="px-2">Email</span>
           </Contact>
         </div>
-      </div>
+      </section>
       <Footer />
     </main>
   )
