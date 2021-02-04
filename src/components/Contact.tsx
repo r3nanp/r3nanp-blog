@@ -21,8 +21,8 @@ const Contact: React.FC<IContactProps> = ({
       <Link href={href}>
         <a className="mb-2 w-48" rel="noopener noreferrer" target="_blank">
           <motion.div
-            whileHover={{ scale: 1.2 }}
-            className={`flex transition items-center justify-center w-48 rounded text-white ${color} p-4 hover:${hover_color}`}
+            whileHover={{ scale: 1.1 }}
+            className={`flex transition items-center justify-center w-48 font-bold rounded text-white shadow-md ${color} p-4 hover:${hover_color}`}
           >
             {children}
           </motion.div>
