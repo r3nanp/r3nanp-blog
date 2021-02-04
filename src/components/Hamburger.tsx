@@ -1,0 +1,22 @@
+/* eslint-disable no-use-before-define */
+import React, { ButtonHTMLAttributes } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+
+interface HamburgerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  open: boolean
+  setOpen: (toggle: boolean) => void
+}
+
+const Hamburger: React.FC<HamburgerProps> = ({ open, setOpen, ...rest }) => {
+  return (
+    <button
+      onClick={() => setOpen(!open)}
+      className="md:hidden lg:hidden flex items-center justify-between px-3 py-2 rounded text-white hover:border-white"
+      {...rest}
+    >
+      <GiHamburgerMenu size={20} color="#000000" />
+    </button>
+  )
+}
+
+export { Hamburger }
