@@ -18,7 +18,7 @@ const PostLayout: React.FC<IPostLayout> = ({
   title,
 }) => {
   return (
-    <main className="bg-gray-100 h-screen w-full">
+    <>
       <Head>
         <title>{title}</title>
 
@@ -43,23 +43,25 @@ const PostLayout: React.FC<IPostLayout> = ({
         <link rel="icon" href="/icon.png" />
       </Head>
       <Header />
-      <article className="py-6 px-4 bg-gray-100 break-words w-full">
-        <h1 className="flex items-center font-bold text-xl md:justify-center">
-          {title}
-        </h1>
-        <img
-          className="py-2 md:m-auto"
-          width="600"
-          src={thumbnailUrl}
-          alt={title}
-        />
-        <div
-          className="text-justify bg-gray-100"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      </article>
+      <main className="h-screen w-full">
+        <section className="py-6 px-4 break-words w-full">
+          <h1 className="flex items-center font-bold text-xl md:justify-center">
+            {title}
+          </h1>
+          <img
+            className="py-2 md:m-auto"
+            width="600"
+            src={thumbnailUrl}
+            alt={title}
+          />
+          <article
+            className="text-justify"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        </section>
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
 
