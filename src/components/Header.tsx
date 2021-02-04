@@ -1,30 +1,27 @@
 // eslint-disable-next-line no-use-before-define
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Link from 'next/link'
 
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { useOnClickOutside } from '../hooks/useClickOutside'
+import { Hamburger } from './Hamburger'
 
 const Header: React.FC = () => {
-  const [toggle, setToggle] = useState(true)
+  const [open, setOpen] = useState(true)
+  const headerRef = useRef<HTMLDivElement>(null)
+  useOnClickOutside(headerRef, () => setOpen(false))
 
   return (
-    <nav className="w-full flex items-center justify-between flex-wrap p-4 border-b border-b-black">
+    <header ref={headerRef} className="sticky top-0 z-10 bg-white w-full flex items-center justify-between flex-wrap p-4 border-b border-b-black">
       <h1 className="font-bold text-2xl mr-4 text-black">Renan Pereira</h1>
 
-      <div className="block md:hidden">
-        <button
-          onClick={() => setToggle(!toggle)}
-          className="md:hidden lg:hidden flex items-center justify-between px-3 py-2 rounded text-white hover:border-white"
-        >
-          <GiHamburgerMenu size={20} color="#000000" />
-        </button>
-      </div>
+      <Hamburger open={open} setOpen={setOpen} />
+
       <div
         className={`${
-          toggle ? `flex` : `hidden`
-        } w-full flex items-center justify-between lg:w-auto`}
+          open ? `block` : `hidden`
+        } w-full lg:w-auto`}
       >
-        <div className="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+        <nav className="w-full flex-grow sm:flex sm:items-center sm:w-auto">
           <div className="lg:flex-grow">
             <Link href="/">
               <a className="mt-4 lg:mt-0 text-black hover:underline mr-4">
@@ -37,9 +34,9 @@ const Header: React.FC = () => {
               </a>
             </Link>
           </div>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   )
 }
 
