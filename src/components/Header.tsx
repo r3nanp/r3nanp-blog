@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
       <div
         className={`${
-          open ? `block` : `hidden`
+          open ? `hidden` : `block`
         } w-full lg:w-auto`}
       >
         <nav className="w-full flex-grow sm:flex sm:items-center sm:w-auto">
