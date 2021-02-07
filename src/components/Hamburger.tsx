@@ -11,7 +11,9 @@ const Hamburger: React.FC<HamburgerProps> = ({ open, setOpen, ...rest }) => {
   return (
     <button
       onClick={() => setOpen(!open)}
-      className="md:hidden lg:hidden flex items-center justify-between px-3 py-2 rounded text-white hover:border-white"
+      className={`${
+        open ? 'flex' : 'hidden'
+      } items-center justify-between px-3 py-2 rounded text-white hover:border-white`}
       {...rest}
     >
       <GiHamburgerMenu size={20} color="#000000" />
