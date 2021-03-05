@@ -3,7 +3,7 @@ import { useEffect, RefObject } from 'react'
 export const useOnClickOutside = (
   ref: RefObject<HTMLDivElement>,
   closeMenu: () => void
-) => {
+): void => {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
       if (
