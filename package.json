@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "keywords": [
-    "next",
-    "typescript",
-    "react",
     "blog",
-    "tailwindcss",
-    "css",
-    "js"
+    "r3nanp"
   ],
   "author": "Renan Pereira <renanmol87@gmail.com>",
   "description": "A blog written with Next.js to improve my knowledge in this framework.",
@@ -23,7 +18,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint --ext js,tsx,ts src/"
   },
   "dependencies": {
     "autoprefixer": "^10.2.0",
