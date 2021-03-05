@@ -1,11 +1,11 @@
 import { FC } from 'react'
-
 import { GetStaticProps } from 'next'
-import { getAllPosts } from './api/post'
 import Link from 'next/link'
-import Head from 'next/head'
+
+import { getAllPosts } from './api/post'
 
 import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
 import { Header } from '../components/Header'
 import { Container } from '../components/Container'
 import { Footer } from '../components/Footer'
@@ -21,9 +21,7 @@ const Home: FC<HomeProps> = ({ posts }) => {
   return (
     <>
       <main className="bg-white w-full h-screen">
-        <Head>
-          <title>Renan Pereira - Desenvolvedor de software</title>
-        </Head>
+        <SEO title="r3nanp blog" />
 
         <Header />
         <Container>

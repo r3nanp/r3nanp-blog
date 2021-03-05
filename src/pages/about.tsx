@@ -1,19 +1,17 @@
 import { FC } from 'react'
-import Head from 'next/head'
 import Image from 'next/image'
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Contact } from '../components/Contact'
+import { SEO } from '../components/SEO'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 
 const About: FC = () => {
   return (
     <>
-      <Head>
-        <title>Sobre mim</title>
-      </Head>
+      <SEO title="Sobre mim" />
       <Header />
 
       <main className="h-screen">
