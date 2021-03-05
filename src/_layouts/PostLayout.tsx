@@ -1,17 +1,16 @@
-// eslint-disable-next-line no-use-before-define
-import React from 'react'
+import { FC } from 'react'
 import Head from 'next/head'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
-interface IPostLayout {
+interface PostLayoutProps {
   title: string
   description: string
   thumbnailUrl: string
   content: string
 }
 
-const PostLayout: React.FC<IPostLayout> = ({
+const PostLayout: FC<PostLayoutProps> = ({
   thumbnailUrl,
   content,
   description,
@@ -39,8 +38,6 @@ const PostLayout: React.FC<IPostLayout> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={thumbnailUrl} />
-
-        <link rel="icon" href="/icon.png" />
       </Head>
       <Header />
       <main className="h-screen w-full">

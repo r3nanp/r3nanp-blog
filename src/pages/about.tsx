@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-use-before-define
-import React from 'react'
+import { FC } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -9,11 +8,10 @@ import { Contact } from '../components/Contact'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 
-const About: React.FC = () => {
+const About: FC = () => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/icon.png" />
         <title>Sobre mim</title>
       </Head>
       <Header />

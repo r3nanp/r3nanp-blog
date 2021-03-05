@@ -1,5 +1,5 @@
-// eslint-disable-next-line no-use-before-define
-import React from 'react'
+import { FC } from 'react'
+
 import { GetStaticProps } from 'next'
 import { getAllPosts } from './api/post'
 import Link from 'next/link'
@@ -17,12 +17,11 @@ interface HomeProps {
   }>
 }
 
-const Home: React.FC<HomeProps> = ({ posts }) => {
+const Home: FC<HomeProps> = ({ posts }) => {
   return (
     <>
       <main className="bg-white w-full h-screen">
         <Head>
-          <link rel="icon" href="/icon.png" />
           <title>Renan Pereira - Desenvolvedor de software</title>
         </Head>
 
