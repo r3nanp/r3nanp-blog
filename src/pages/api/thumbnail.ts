@@ -7,7 +7,7 @@ const isDev = !process.env.AWS_REGION
 export default async function (
   req: NextApiRequest,
   res: NextApiResponse
-): Promise<any> {
+): Promise<void> {
   try {
     const query = req.query
 

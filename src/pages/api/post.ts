@@ -19,7 +19,16 @@ export async function getAllPosts() {
   return posts
 }
 
-export async function getPostBySlug(slug: string | string[]) {
+interface GetPostBySlug {
+  title: string
+  description: string
+  thumbnailUrl: string
+  content: string
+}
+
+export async function getPostBySlug(
+  slug: string | string[]
+): Promise<GetPostBySlug> {
   const fileContent = await import(`../../_posts/${slug}.md`)
 
   const baseUrl =
@@ -32,9 +41,7 @@ export async function getPostBySlug(slug: string | string[]) {
 
   const thumbnailUrl = `${baseUrl}/api/thumbnail.png?title=${
     meta.data.title
-  }&thumbnail_bg=${encodeURIComponent(
-    meta.data.thumbnail_bg
-  )}`
+  }&thumbnail_bg=${encodeURIComponent(meta.data.thumbnail_bg)}`
 
   return {
     title: meta.data.title,
