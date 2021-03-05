@@ -1,21 +1,15 @@
-// eslint-disable-next-line no-use-before-define
-import React from 'react'
+import { ReactNode, FC } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-interface IContactProps {
+interface ContactProps {
   href: string
   color: string
   hover_color: string
-  children: React.ReactNode
+  children: ReactNode
 }
 
-const Contact: React.FC<IContactProps> = ({
-  href,
-  children,
-  color,
-  hover_color,
-}) => {
+const Contact: FC<ContactProps> = ({ href, children, color, hover_color }) => {
   return (
     <>
       <Link href={href}>

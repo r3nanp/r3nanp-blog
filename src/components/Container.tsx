@@ -1,8 +1,11 @@
-// eslint-disable-next-line no-use-before-define
-import React from 'react'
+import { FC, ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
-const Container: React.FC = ({ children }) => {
+interface ContainerProps {
+  children: ReactNode
+}
+
+const Container: FC<ContainerProps> = ({ children }) => {
   return (
     <motion.main
       initial={{ opacity: 0, translateX: -40 }}

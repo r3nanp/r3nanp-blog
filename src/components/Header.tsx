@@ -11,16 +11,15 @@ const Header: React.FC = () => {
   useOnClickOutside(headerRef, () => setOpen(false))
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-10 bg-white w-full flex items-center justify-between flex-wrap p-4 border-b border-b-black">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-10 bg-white w-full flex items-center justify-between flex-wrap p-4 border-b border-b-black"
+    >
       <h1 className="font-bold text-2xl mr-4 text-black">Renan Pereira</h1>
 
       <Hamburger open={open} setOpen={setOpen} />
 
-      <div
-        className={`${
-          open ? `hidden` : `block`
-        } w-full lg:w-auto`}
-      >
+      <div className={`${open ? `hidden` : `block`} w-full lg:w-auto`}>
         <nav className="w-full flex-grow sm:flex sm:items-center sm:w-auto">
           <div className="lg:flex-grow">
             <Link href="/">

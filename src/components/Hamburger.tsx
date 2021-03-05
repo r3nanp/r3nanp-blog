@@ -1,5 +1,4 @@
-/* eslint-disable no-use-before-define */
-import React, { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, FC } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 interface HamburgerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -7,7 +6,7 @@ interface HamburgerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   setOpen: (toggle: boolean) => void
 }
 
-const Hamburger: React.FC<HamburgerProps> = ({ open, setOpen, ...rest }) => {
+const Hamburger: FC<HamburgerProps> = ({ open, setOpen, ...rest }) => {
   return (
     <button
       onClick={() => setOpen(!open)}
