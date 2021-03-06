@@ -1,0 +1,30 @@
+{
+  "name": "r3nanp blog",
+  "description": "A app to make you r3nanp blog",
+  "short_name": "r3nanp blog",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#fafafa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "100x100",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon@192x.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon@512x.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
