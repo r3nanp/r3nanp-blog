@@ -31,6 +31,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
             rel="stylesheet"
           />
+          <link rel="manifest" href="manifest.json" />
+          <link rel="apple-touch-icon" sizes="192x192" href="/icon@192x.png" />
           <script
             data-ad-client="ca-pub-5125791754395683"
             async
