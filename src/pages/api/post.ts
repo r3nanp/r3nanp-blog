@@ -1,7 +1,7 @@
 import matter from 'gray-matter'
 import marked from 'marked'
 
-export async function getAllPosts() {
+export async function getAllPosts(): Promise<string[]> {
   const context = require.context('../../_posts', false, /\.md$/)
   const posts = []
 
