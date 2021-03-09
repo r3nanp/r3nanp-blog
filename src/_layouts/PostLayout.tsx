@@ -46,18 +46,18 @@ const PostLayout: FC<PostLayoutProps> = ({
             {title}
           </h1>
           <img
-            className="py-2 md:m-auto"
+            className="py-4 md:m-auto"
             width="600"
             src={thumbnailUrl}
             alt={title}
           />
           <article
-            className="text-justify"
+            className="text-justify px-2"
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </section>
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }
