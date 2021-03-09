@@ -1,11 +1,10 @@
-// eslint-disable-next-line no-use-before-define
-import React, { useRef, useState } from 'react'
+import { FC, useRef, useState } from 'react'
 import Link from 'next/link'
 
 import { useOnClickOutside } from '../hooks/useClickOutside'
 import { Hamburger } from './Hamburger'
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   const [open, setOpen] = useState(true)
   const headerRef = useRef<HTMLDivElement>(null)
   useOnClickOutside(headerRef, () => setOpen(false))
