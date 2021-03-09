@@ -5,4 +5,12 @@ module.exports = {
 
     return config
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/thumbnail.png',
+        destination: '/api/thumbnail',
+      },
+    ]
+  },
 }
