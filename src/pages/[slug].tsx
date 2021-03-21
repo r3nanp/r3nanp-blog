@@ -1,7 +1,7 @@
 import { FC } from 'react'
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 import { PostLayout } from '../_layouts/PostLayout'
 import { getPostBySlug, getAllPosts } from './api/post'
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 
 interface PostProps {
   title: string

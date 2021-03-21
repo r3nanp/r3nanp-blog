@@ -1,14 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import matter from 'gray-matter'
 import marked from 'marked'
 
-interface IGetAllPosts {
-  title: string
-  slug: string
-}
-
-export async function getAllPosts(): Promise<IGetAllPosts[]> {
+export async function getAllPosts(): Promise<any[]> {
   const context = require.context('../../_posts', false, /\.md$/)
-  const posts: IGetAllPosts[] = []
+  const posts = []
 
   for (const key of context.keys()) {
     const post = key.slice(2)
