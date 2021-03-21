@@ -1,10 +1,14 @@
 import matter from 'gray-matter'
 import marked from 'marked'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function getAllPosts(): Promise<any[]> {
+interface IGetAllPosts {
+  title: string
+  slug: string
+}
+
+export async function getAllPosts(): Promise<IGetAllPosts[]> {
   const context = require.context('../../_posts', false, /\.md$/)
-  const posts = []
+  const posts: IGetAllPosts[] = []
 
   for (const key of context.keys()) {
     const post = key.slice(2)
@@ -20,7 +24,7 @@ export async function getAllPosts(): Promise<any[]> {
   return posts
 }
 
-interface GetPostBySlug {
+interface IGetPostBySlug {
   title: string
   description: string
   thumbnailUrl: string
@@ -29,7 +33,7 @@ interface GetPostBySlug {
 
 export async function getPostBySlug(
   slug: string | string[]
-): Promise<GetPostBySlug> {
+): Promise<IGetPostBySlug> {
   const fileContent = await import(`../../_posts/${slug}.md`)
 
   const baseUrl =
