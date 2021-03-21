@@ -1,11 +1,11 @@
 module.exports = {
-  purge: [],
+  purge: false,
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'Poppins', 'ui-sans-serif']
-      }
+        sans: ['Roboto', 'Poppins', 'ui-sans-serif'],
+      },
     },
   },
   variants: {
