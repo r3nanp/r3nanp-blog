@@ -1,7 +1,8 @@
 import matter from 'gray-matter'
 import marked from 'marked'
 
-export async function getAllPosts(): Promise<string[]> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function getAllPosts(): Promise<any[]> {
   const context = require.context('../../_posts', false, /\.md$/)
   const posts = []
 
